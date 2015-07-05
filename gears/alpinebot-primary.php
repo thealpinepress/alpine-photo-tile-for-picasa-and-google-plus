@@ -312,7 +312,7 @@ class PhotoTileForGooglePlusPrimary {
     }elseif( 'fancybox' == $string ){
       return $this->url.'/js/fancybox/jquery.fancybox-1.3.4.pack.js?ver=1.3.4';
     }elseif( 'prettyphoto' == $string ){
-      return $this->url.'/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.1.5';
+      return $this->url.'/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.1.6';
     }elseif( 'colorbox' == $string ){
       return $this->url.'/js/colorbox/jquery.colorbox-min.js?ver=1.4.33';	
     }elseif( 'alpine-fancybox' == $string ){
@@ -459,7 +459,7 @@ class PhotoTileForGooglePlusPrimary {
  * Option Parameters and Defaults
  *  
  * @ Since 1.0.0
- * @ Updated 1.2.6.5-patch1
+ * @ Updated 1.2.6.6-patch1
  */
   function option_defaults(){
     $options = array(
@@ -1051,7 +1051,7 @@ class PhotoTileForGooglePlusPrimary {
         'position' => 'top',
         'default' => ''
       ), 
-	  'general_caption' => array(
+    		'general_caption' => array(
     				'name' => 'general_caption',
     				'title' => 'Choose image caption : ',
     				'type' => 'select',
@@ -1071,9 +1071,9 @@ class PhotoTileForGooglePlusPrimary {
     				),
     				'tab' => 'plugin-settings',
     				'position' => 'top',
-    				'since' => '1.2.6.5-patch1',
+    				'since' => '1.2.6.6-patch1',
     				'default' => 'title-only'
-      ),
+    		),
     		
       'hidden_display_link' => array(
         'name' => 'hidden_display_link',

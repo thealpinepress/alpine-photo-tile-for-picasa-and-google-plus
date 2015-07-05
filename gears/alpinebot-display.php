@@ -487,12 +487,13 @@ class PhotoTileForGooglePlusBotTertiary extends PhotoTileForGooglePlusBotSeconda
  *  Function for making Picasa request with json return format
  *  
  *  @ Since 1.2.4
- *  @ Updated 1.2.6.5-patch1
+ *  @ Updated 1.2.6.6-patch1
  */
   function try_json(){
     // Retrieve content using wp_remote_get and JSON
     $request = $this->get_picasa_request('json');
     $options = $this->get_private('options');
+    
     $_picasa_json = $this->get_picasa_feed($request);
     if( !empty( $_picasa_json ) ){
       $_picasa_json = @json_decode( $_picasa_json );
@@ -529,11 +530,11 @@ class PhotoTileForGooglePlusBotTertiary extends PhotoTileForGooglePlusBotSeconda
             $title = (array) $p->title;
             $the_photo['image_title'] = (string) $title['$t'];
             $the_photo['image_title'] = str_replace(array('.jpg', '.JPG'),'',$the_photo['image_title']);
-
             // caption fix - Paul Petershagen 9/12/2014
             $caption = (array) $p->summary;
             $the_photo['image_caption'] = (string) $caption['$t'];
             // caption fix end
+            
             
             // list of link urls;
             $the_photo['image_link'] = '';
@@ -627,7 +628,6 @@ class PhotoTileForGooglePlusBotTertiary extends PhotoTileForGooglePlusBotSeconda
       $this->set_active_result('userlink',$link);
       $rss_data = isset($data[null]['item'])?$data[null]['item']:array();
 
- 	  echo "rss $rss_data";
       $s = 0; // simple counter
       if ( !empty($rss_data) ){ // Check again
         foreach ( $rss_data as $item ) {
@@ -1050,7 +1050,7 @@ class PhotoTileForGooglePlusBot extends PhotoTileForGooglePlusBotTertiary{
  *  Add Image Function
  *  
  *  @ Since 1.2.2
- *  @ Updated 1.2.6.5-patch1
+ *  @ Updated 1.2.6.6-patch1
  ** Possible change: place original image as 'alt' and load image as needed
  */
   function add_image($i,$css="",$pin=false){
@@ -1101,7 +1101,7 @@ class PhotoTileForGooglePlusBot extends PhotoTileForGooglePlusBotTertiary{
  *  Get Image Link
  *  
  *  @ Since 1.2.2
- *  @ Updated 1.2.6.5-patch1
+ *  @ Updated 1.2.6.6-patch1
  */
   function get_link($i){
     $src = $this->get_private('src');
@@ -1127,6 +1127,7 @@ class PhotoTileForGooglePlusBot extends PhotoTileForGooglePlusBotTertiary{
 	    $phototitle = $this->get_photo_info($i,'image_caption');
     }
     // caption fix end
+    
     $photourl = $this->get_photo_info($i,'image_source');
     $linkurl = $this->get_photo_info($i,'image_link');
     $originalurl = $this->get_photo_info($i,'image_original');
