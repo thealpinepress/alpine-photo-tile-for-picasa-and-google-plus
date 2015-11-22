@@ -1,6 +1,6 @@
 <?php
 /**
- *  AlpineBot Seconday
+ *  AlpineBot Secondary
  * 
  *  ADMIN Functions
  *  Contains ONLY UNIVERSAL ADMIN functions
@@ -696,10 +696,15 @@ class PhotoTileForGooglePlusAdmin extends PhotoTileForGooglePlusAdminSecondary{
    * Alpine PhotoTile: Options Page
    *
    * @ Since 1.1.1
-   * @ Updated 1.2.4
+   * @ Updated 1.2.7.6
    */
   function admin_build_settings_page(){
-    $currenttab = isset( $_GET['tab'] )?$_GET['tab']:'general'; 
+    $currenttab = isset( $_GET['tab'] )?$_GET['tab']:'general';
+    // Check for valid tab
+    $possible_tabs = array_keys( $this->admin_settings_page_tabs() );
+    if( !in_array($currenttab,$possible_tabs) ){
+        $currenttab = 'general';
+    }
     
     echo '<div class="wrap AlpinePhotoTiles_settings_wrap">';
     $this->admin_options_page_tabs( $currenttab );
@@ -714,8 +719,9 @@ class PhotoTileForGooglePlusAdmin extends PhotoTileForGooglePlusAdminSecondary{
         echo '</div>';
         
         echo '<div class="bottom" style="position:relative;width:100%;margin-top:20px;">';
-          $this->admin_donate_button();
-          echo '<div class="help-link"><p>'.__('Need Help? Visit ').'<a href="'.$this->get_private('info').'" target="_blank">the Alpine Press</a>'.__(' for more about this plugin.').'</p></div>';  
+          //$this->admin_donate_button();
+          echo '<div class="help-link"><p>'.__('Need Help? Visit ').'<a href="'.$this->get_private('info').'" target="_blank">the Alpine Press</a>'.__(' for more about this plugin.').'</p></div>'; 
+					echo '<div><b>**Please Note: This plugin is no longer being developed or maintained. If you are a WordPress developer, I encourage you to take this plugin and make it your own.**</b></div>';
         echo '</div>';
       echo '</div>'; // Close Container
 

@@ -1,16 +1,18 @@
 === Alpine PhotoTile for Google Plus and Picasa  ===
 Contributors: theAlpinePress
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=eric%40thealpinepress%2ecom&lc=US&item_name=Alpine%20PhotoTile%20for%20Google%20Plus%20Donation&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: photos, picasa, google, plus, google+, photostream, stylish, pictures, images, widget, sidebar, gallery, lightbox, fancybox, colorbox, prettybox
+Tags: photos, photostream, stylish, pictures, images, widget, sidebar, gallery, lightbox, fancybox, colorbox, prettybox
 Requires at least: 2.8
 Tested up to: 3.8
-Stable tag: 1.2.6.6
+Stable tag: 1.2.6.8-patch1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Stylish and compact plugin for displaying Picasa and Google Plus images in a sidebar, post, or page. 
 
 == Description == 
+
+**Please Note: This plugin is no longer being developed or maintained. If you are a WordPress developer, I encourage you to take this plugin and make it your own.**
+
 The Alpine PhotoTile for Google Plus (formerly Picasa)  is capable of retrieving photos from a particular Google Plus user, a public album, a semi-private album, or a keyword. 
 The photos can be linked to the your Google Plus page, a specific URL, or to a Lighbox slideshow. 
 Also, the Shortcode Generator makes it easy to insert the widget into posts without learning any of the code. 
@@ -213,8 +215,19 @@ I am a one-man development team and I distribute these plugins for free, so plea
 = 1.2.6.6 =
 * Pretty Photo Update
 
+= 1.2.6.6-patch1 =
+* Added caption to display
+
+= 1.2.6.7 =
+* Fixed Admin Tabs
+
+= 1.2.6.8 =
+* End of development notice
+
+= 1.2.6.8-patch1 =
+* Fixed escaping within caption titles
+
 = TODO =
 * Change to FancyBox 2
-* Add caption to display
 * Rebuild jQuery display
 * Check with Contact Form 7

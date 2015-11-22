@@ -535,7 +535,6 @@ class PhotoTileForGooglePlusBotTertiary extends PhotoTileForGooglePlusBotSeconda
             $the_photo['image_caption'] = (string) $caption['$t'];
             // caption fix end
             
-            
             // list of link urls;
             $the_photo['image_link'] = '';
             $glink = $p->link;
