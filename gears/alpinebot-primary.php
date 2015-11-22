@@ -459,7 +459,7 @@ class PhotoTileForGooglePlusPrimary {
  * Option Parameters and Defaults
  *  
  * @ Since 1.0.0
- * @ Updated 1.2.6.6-patch1
+ * @ Updated 1.2.6.3
  */
   function option_defaults(){
     $options = array(
@@ -1051,30 +1051,7 @@ class PhotoTileForGooglePlusPrimary {
         'position' => 'top',
         'default' => ''
       ), 
-    		'general_caption' => array(
-    				'name' => 'general_caption',
-    				'title' => 'Choose image caption : ',
-    				'type' => 'select',
-    				'valid_options' => array(
-    						'title-only' => array(
-    								'name' => 'title-only',
-    								'title' => 'title (prefix if filename)'
-    						),
-    						'caption-only' => array(
-    								'name' => 'caption-only',
-    								'title' => 'caption (or none)'
-    						),
-    						'caption-title' => array(
-    								'name' => 'caption-title',
-    								'title' => 'caption (or title)'
-    						)
-    				),
-    				'tab' => 'plugin-settings',
-    				'position' => 'top',
-    				'since' => '1.2.6.6-patch1',
-    				'default' => 'title-only'
-    		),
-    		
+
       'hidden_display_link' => array(
         'name' => 'hidden_display_link',
         'title' => 'Link Below Widget: ',

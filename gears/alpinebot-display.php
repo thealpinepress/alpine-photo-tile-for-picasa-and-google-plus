@@ -487,7 +487,6 @@ class PhotoTileForGooglePlusBotTertiary extends PhotoTileForGooglePlusBotSeconda
  *  Function for making Picasa request with json return format
  *  
  *  @ Since 1.2.4
- *  @ Updated 1.2.6.6-patch1
  */
   function try_json(){
     // Retrieve content using wp_remote_get and JSON
@@ -530,12 +529,8 @@ class PhotoTileForGooglePlusBotTertiary extends PhotoTileForGooglePlusBotSeconda
             $title = (array) $p->title;
             $the_photo['image_title'] = (string) $title['$t'];
             $the_photo['image_title'] = str_replace(array('.jpg', '.JPG'),'',$the_photo['image_title']);
-            // caption fix - Paul Petershagen 9/12/2014
-            $caption = (array) $p->summary;
-            $the_photo['image_caption'] = (string) $caption['$t'];
-            // caption fix end
-            
-            
+            $the_photo['image_caption'] = '';
+
             // list of link urls;
             $the_photo['image_link'] = '';
             $glink = $p->link;
@@ -1050,28 +1045,12 @@ class PhotoTileForGooglePlusBot extends PhotoTileForGooglePlusBotTertiary{
  *  Add Image Function
  *  
  *  @ Since 1.2.2
- *  @ Updated 1.2.6.6-patch1
+ *  @ Updated 1.2.4
  ** Possible change: place original image as 'alt' and load image as needed
  */
   function add_image($i,$css="",$pin=false){
     $light = $this->get_option( 'general_lightbox' );
-    // caption fix - Paul Petershagen 9/12/2014
-    $option_caption = $this->get_option( 'general_caption' );
-    if ($option_caption == 'title-only') {
-    	$title = $this->get_photo_info($i,'image_title');
-    }
-    else if ($option_caption == 'caption-title') {
-    	$title = $this->get_photo_info($i,'image_title');
-    	$caption = $this->get_photo_info($i,'image_caption');
-    	if (isset($caption) ) {
-    		if (strlen($caption)>0)
-	    		$title = $caption;
-    	}
-    }
-    else {
-	    $title = $this->get_photo_info($i,'image_caption');
-    }
-    // caption fix end
+    $title = $this->get_photo_info($i,'image_title');
     $src = $this->get_photo_info($i,'image_source');
     $shadow = ($this->check_active_option('style_shadow')?'AlpinePhotoTiles-img-shadow':'AlpinePhotoTiles-img-noshadow');
     $border = ($this->check_active_option('style_border')?'AlpinePhotoTiles-img-border':'AlpinePhotoTiles-img-noborder');
@@ -1101,33 +1080,14 @@ class PhotoTileForGooglePlusBot extends PhotoTileForGooglePlusBotTertiary{
  *  Get Image Link
  *  
  *  @ Since 1.2.2
- *  @ Updated 1.2.6.6-patch1
+ *  @ Updated 1.2.6.5
  */
   function get_link($i){
     $src = $this->get_private('src');
     $link = $this->get_active_option($src.'_image_link_option');
     $url = $this->get_active_option('custom_link_url');
 
-    $phototitle = $this->get_photo_info($i,'image_title');
-    
-    // caption fix - Paul Petershagen 9/12/2014
-    $option_caption = $this->get_option( 'general_caption' );
-    if ($option_caption == 'title-only') {
-    	$phototitle = $this->get_photo_info($i,'image_title');
-    }
-    else if ($option_caption == 'caption-title') {
-    	$phototitle = $this->get_photo_info($i,'image_title');
-    	$caption = $this->get_photo_info($i,'image_caption');
-    	if (isset($caption) ) {
-    		if (strlen($caption)>0)
-	    		$phototitle = $caption;
-    	}
-    }
-    else {
-	    $phototitle = $this->get_photo_info($i,'image_caption');
-    }
-    // caption fix end
-    
+    $phototitle = $this->get_photo_info($i,'image_title'); 
     $photourl = $this->get_photo_info($i,'image_source');
     $linkurl = $this->get_photo_info($i,'image_link');
     $originalurl = $this->get_photo_info($i,'image_original');
