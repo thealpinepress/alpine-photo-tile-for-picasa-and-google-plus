@@ -1100,7 +1100,7 @@ class PhotoTileForGooglePlusBot extends PhotoTileForGooglePlusBotTertiary{
  *  Get Image Link
  *  
  *  @ Since 1.2.2
- *  @ Updated 1.2.6.6-patch1
+ *  @ Updated 1.2.6.8-patch1
  */
   function get_link($i){
     $src = $this->get_private('src');
@@ -1125,6 +1125,8 @@ class PhotoTileForGooglePlusBot extends PhotoTileForGooglePlusBotTertiary{
     else {
 	    $phototitle = $this->get_photo_info($i,'image_caption');
     }
+    $phototitle = html_entity_decode($phototitle);
+    $phototitle = trim(str_replace('"', '\'', $phototitle));
     // caption fix end
     
     $photourl = $this->get_photo_info($i,'image_source');
@@ -1132,17 +1134,17 @@ class PhotoTileForGooglePlusBot extends PhotoTileForGooglePlusBotTertiary{
     $originalurl = $this->get_photo_info($i,'image_original');
 
     if( 'original' == $link && !empty($photourl) ){
-      $this->add('<a href="' . $photourl . '" class="AlpinePhotoTiles-link" target="_blank" title=" '. $phototitle .' " alt=" '. $phototitle .' ">');
+      $this->add('<a href="' . $photourl . '" class="AlpinePhotoTiles-link" target="_blank" title="'. $phototitle .' " alt="'. $phototitle .'">');
       return true;
     }elseif( ($src == $link || '1' == $link) && !empty($linkurl) ){
-      $this->add('<a href="' . $linkurl . '" class="AlpinePhotoTiles-link" target="_blank" title=" '. $phototitle .' " alt=" '. $phototitle .' ">');
+      $this->add('<a href="' . $linkurl . '" class="AlpinePhotoTiles-link" target="_blank" title="'. $phototitle .'" alt="'. $phototitle .'">');
       return true;
     }elseif( 'link' == $link && !empty($url) ){
-      $this->add('<a href="' . $url . '" class="AlpinePhotoTiles-link" title=" '. $phototitle .' " alt=" '. $phototitle .' ">'); 
+      $this->add('<a href="' . $url . '" class="AlpinePhotoTiles-link" title="'. $phototitle .'" alt="'. $phototitle .'">'); 
       return true;
     }elseif( 'fancybox' == $link && !empty($originalurl) ){
       $light = $this->get_option( 'general_lightbox' );
-      $this->add('<a href="' . $originalurl . '" class="AlpinePhotoTiles-link AlpinePhotoTiles-lightbox" title=" '. $phototitle .' " alt=" '. $phototitle .' ">'); 
+      $this->add('<a href="' . $originalurl . '" class="AlpinePhotoTiles-link AlpinePhotoTiles-lightbox" title="'. $phototitle .'" alt="'. $phototitle .'">'); 
       return true;
     }  
     return false;    
