@@ -3,7 +3,7 @@
 * Tags: photos, photostream, stylish, pictures, images, widget, sidebar, gallery, lightbox, fancybox, colorbox, prettybox
 * Requires at least: 2.8
 * Tested up to: 3.8
-* Stable tag: 1.2.6.9
+* Stable tag: 1.2.6.8-patch1
 * License: GPLv3 or later
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
