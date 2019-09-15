@@ -9,7 +9,7 @@
 
 **Stylish and compact plugin for displaying Picasa and Google Plus images in a sidebar, post, or page.** 
 
-**Please Note: This plugin is no longer being developed or maintained. If you are a WordPress developer, I encourage you to take this plugin and make it your own.**
+### Please Note: This plugin is no longer being developed or maintained. If you are a WordPress developer, I encourage you to take this plugin and make it your own.
 
 ## Description
 
