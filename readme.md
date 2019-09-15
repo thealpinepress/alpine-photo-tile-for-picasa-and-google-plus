@@ -7,11 +7,11 @@
 * License: GPLv3 or later
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Stylish and compact plugin for displaying Picasa and Google Plus images in a sidebar, post, or page. 
-
-## Description
+**Stylish and compact plugin for displaying Picasa and Google Plus images in a sidebar, post, or page.** 
 
 **Please Note: This plugin is no longer being developed or maintained. If you are a WordPress developer, I encourage you to take this plugin and make it your own.**
+
+## Description
 
 The Alpine PhotoTile for Google Plus (formerly Picasa)  is capable of retrieving photos from a particular Google Plus user, a public album, a semi-private album, or a keyword. 
 The photos can be linked to the your Google Plus page, a specific URL, or to a Lighbox slideshow. 
@@ -140,11 +140,6 @@ The plugin caches or stores the Google Plus (Picasa) feed for three hours (see C
 ### How many photos can I show?
 
 As of version 1.2.0, up to 100 photos can be retrieved and displayed.
-
-
-*If you have any more questions, please leave a message at [the Alpine Press](http://thealpinepress.com/alpine-phototile-for-picasa/ "Plugin Demo").
-I am a one-man development team and I distribute these plugins for free, so please be patient with me.*
-
 
 ## TODOs
 * Adjust to latest Wordpress version
