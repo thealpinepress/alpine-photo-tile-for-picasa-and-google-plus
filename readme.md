@@ -1,15 +1,15 @@
-=== Alpine PhotoTile for Google Plus and Picasa  ===
-Contributors: theAlpinePress
-Tags: photos, photostream, stylish, pictures, images, widget, sidebar, gallery, lightbox, fancybox, colorbox, prettybox
-Requires at least: 2.8
-Tested up to: 3.8
-Stable tag: 1.2.6.8-patch1
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+# Alpine PhotoTile for Google Plus and Picasa
+* Contributors: theAlpinePress
+* Tags: photos, photostream, stylish, pictures, images, widget, sidebar, gallery, lightbox, fancybox, colorbox, prettybox
+* Requires at least: 2.8
+* Tested up to: 3.8
+* Stable tag: 1.2.6.9
+* License: GPLv3 or later
+* License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Stylish and compact plugin for displaying Picasa and Google Plus images in a sidebar, post, or page. 
 
-== Description == 
+## Description
 
 **Please Note: This plugin is no longer being developed or maintained. If you are a WordPress developer, I encourage you to take this plugin and make it your own.**
 
@@ -37,7 +37,7 @@ A full description and demonstration is available at [the Alpine Press](http://t
 5. Open another page/window in your web browser and navigate to your WordPress site to see how the sidebar looks with the Alpine PhotoTile for Picasa included.
 6. Play around with the various styles and options to find what works best for your site.
 
-== Installation ==
+## Installation
 
 **Picasa and Google Plus Plugin Installation**
 
@@ -55,9 +55,9 @@ A full description and demonstration is available at [the Alpine Press](http://t
 6. A shortcode is a line of texted used for loading plugins within WordPress pages or posts. Rather than explaining how to setup the shortcode, I have added a tool to the Alpine PhotoTile for Picasa and Google Plus plugin that generates the shortcode for you. Visit the "Shortcode Generator" on the Picasa and Google Plus plugin's settings page (*Settings->AlpineTile: Picasa and Google Plus->Shortcode Generator*).
 
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
-= How do I find my Google Plus (Picasa) User ID or Album ID? =
+### How do I find my Google Plus (Picasa) User ID or Album ID?
 
 Since Picasa has been combined with Google Plus, Picasa photo albums are also Google Plus photo albums. This also means that there are different ways of finding your ID's depending on whether you start at the Picasa website or your Google Plus page.
 
@@ -93,7 +93,7 @@ Since Picasa has been combined with Google Plus, Picasa photo albums are also Go
 
     where 112515131248168353825 is your User ID and 5828938068968925825 is the Album ID. Here the Album ID is shown as a number rather than text, as in the Google Plus example.
 
-= How do I set a photo album to public? How do I change my privacy settings? =
+### How do I set a photo album to public? How do I change my privacy settings?
 
 Since Picasa has been combined with Google Plus, Picasa photo albums are also Google Plus photo albums. This also means that there are different ways of changing your settings depending on whether you start at the Picasa website or your Google Plus page.
 
@@ -119,25 +119,25 @@ Since Picasa has been combined with Google Plus, Picasa photo albums are also Go
 
   4. Make sure the album you want to show is set to Public.
 
-= I'm getting the message "Google Plus (Picasa) feed was successfully retrieved, but no photos found". What does that mean? =
+### I'm getting the message "Google Plus (Picasa) feed was successfully retrieved, but no photos found". What does that mean?
 
 This message simply means that while no distinguishable errors occurred, the plugin found your feed to be empty.
 
-= I'm getting the message "Google Plus (Picasa) feed not found. Please recheck your ID". What does that mean? =
+### I'm getting the message "Google Plus (Picasa) feed not found. Please recheck your ID". What does that mean?
 
 This message can mean two things. First, it can indicate that the username or custom url were input incorrectly, causing the feed to fail. In this case, you should try to correct and re-save your IDs.
 
 Second, this message can also mean that the server your WordPress site is being hosted on has prevented the feed from being retrieved. While it is rare, we have encountered web-hosts that disable the feed fetching functions used in the PhotoTile plugin. If this is the case, there is nothing we can do to override or work around the settings on your host server.
 
-= Can I insert the plugin in posts or pages? Is there a shortcode function? =
+### Can I insert the plugin in posts or pages? Is there a shortcode function?
 
 Yes, rather than explaining how to setup the shortcode, I've created a method of generating the shortcode. Check out the Shortcode Generator on the plugin's settings page ( Settings->AlpineTile: Picasa & Google Plus->Shortcode Generator).
 
-= Why doesn't the widget show my most recent photos? =
+### Why doesn't the widget show my most recent photos?
 
 The plugin caches or stores the Google Plus (Picasa) feed for three hours (see Caching above). If the new photos have still not appeared after this time, it is possible that Picasa is responsible for the delay.
 
-= How many photos can I show? =
+### How many photos can I show?
 
 As of version 1.2.0, up to 100 photos can be retrieved and displayed.
 
@@ -146,46 +146,51 @@ As of version 1.2.0, up to 100 photos can be retrieved and displayed.
 I am a one-man development team and I distribute these plugins for free, so please be patient with me.*
 
 
-== Changelog ==
+## TODOs
+* Adjust to latest Wordpress version
+* Check for security issues and GDPR compliance
+* Update all libs to latest
+* Change to FancyBox 2
+* Rebuild jQuery display
+* Check with Contact Form 7
 
-= 1.2.0 =
-* Rebuilt Alpine Photo series to work with Picasa and Google Plus
-* Rebuilt plugin structure into OBJECT
-* Combined all Alpine Photo Tiles scripts and styles into identical files
-* Improved IE 7 compatibility
-* Added custom image link options
-* Added Fancybox jQuery option
-* Fixed galleryHeight bug
-* Implemented fetch with wp_remote_get()
+## Changelog
 
-= 1.2.1 =
-* Rebuilt admin div structure
-* Fixed admin css issues
+### 1.2.6.8-patch1
+* Fixed escaping within caption titles
 
-= 1.2.2 =
-* Added aspect ratio options for gallery style
-* Added key generator function
-* Added get_image_url() functions
-* Object oriented id, options, results, and output storage
-* Object oriented display generation
+### 1.2.6.8
+* End of development notice
 
-= 1.2.3 =
-* Added FancyboxForAlpine (Fancybox Safemode)
-* Added choice between Fancybox, prettyBox, and ColorBox
-* Added hidden options, including custom rel for lightbox
+### 1.2.6.7
+* Fixed Admin Tabs
 
-= 1.2.3.1 =
-* Fixed cache retrieval
+### 1.2.6.6-patch1
+* Added caption to display
 
-= 1.2.4 =
-* Restructured plugin objects and reassinged functions
-* Object oriented message, hidden, etc.
-* Added option to disable right-clicking on images
-* Added updateGlobalOptions and removed individual option calls
-* Added donate button
-* Fixed lightbox param option
+### 1.2.6.6
+* Pretty Photo Update
 
-= 1.2.5 =
+### 1.2.6.5
+* jQuery backwards compatibility ( .bind() function for jQuery v1.6.3 and less )
+
+### 1.2.6.3
+* Check compatibility with WP 3.8
+* Small CSS changes (Padding and hover white background)
+* Replaced deprecated jQuery APIs  ( .load() and .browser )
+* Updated prettyPhoto and colorbox
+
+### 1.2.6.2
+* Added authkey for semi-private photo albums. Includes filter to add 'Gv1sRg' to Google+ authkeys. 
+
+### 1.2.6
+* Fixed jQuery bug (Removed all <> tags from inline scripts)
+* Add stripslashes text sanitization
+* Changed lightbox parameters option from CSS to stripslashes sanitization
+* Small fix: Album id in cache key and keyword filter
+
+
+### 1.2.5
 * Added fallback to dynamic style and script loading using jQuery
 * Various small fixes
 * Moved cache location
@@ -194,40 +199,39 @@ I am a one-man development team and I distribute these plugins for free, so plea
 * Implemeted do_alpine_method call
 * Created active options and results functions
 
-= 1.2.6 =
-* Fixed jQuery bug (Removed all <> tags from inline scripts)
-* Add stripslashes text sanitization
-* Changed lightbox parameters option from CSS to stripslashes sanitization
-* Small fix: Album id in cache key and keyword filter
+### 1.2.4
+* Restructured plugin objects and reassinged functions
+* Object oriented message, hidden, etc.
+* Added option to disable right-clicking on images
+* Added updateGlobalOptions and removed individual option calls
+* Added donate button
+* Fixed lightbox param option
 
-= 1.2.6.2 =
-* Added authkey for semi-private photo albums. Includes filter to add 'Gv1sRg' to Google+ authkeys. 
+### 1.2.3.1
+* Fixed cache retrieval
 
-= 1.2.6.3  =
-* Check compatibility with WP 3.8
-* Small CSS changes (Padding and hover white background)
-* Replaced deprecated jQuery APIs  ( .load() and .browser )
-* Updated prettyPhoto and colorbox
+### 1.2.3
+* Added FancyboxForAlpine (Fancybox Safemode)
+* Added choice between Fancybox, prettyBox, and ColorBox
+* Added hidden options, including custom rel for lightbox
 
-= 1.2.6.5 =
-* jQuery backwards compatibility ( .bind() function for jQuery v1.6.3 and less )
+### 1.2.2
+* Added aspect ratio options for gallery style
+* Added key generator function
+* Added get_image_url() functions
+* Object oriented id, options, results, and output storage
+* Object oriented display generation
 
-= 1.2.6.6 =
-* Pretty Photo Update
+### 1.2.1
+* Rebuilt admin div structure
+* Fixed admin css issues
 
-= 1.2.6.6-patch1 =
-* Added caption to display
-
-= 1.2.6.7 =
-* Fixed Admin Tabs
-
-= 1.2.6.8 =
-* End of development notice
-
-= 1.2.6.8-patch1 =
-* Fixed escaping within caption titles
-
-= TODO =
-* Change to FancyBox 2
-* Rebuild jQuery display
-* Check with Contact Form 7
+### 1.2.0
+* Rebuilt Alpine Photo series to work with Picasa and Google Plus
+* Rebuilt plugin structure into OBJECT
+* Combined all Alpine Photo Tiles scripts and styles into identical files
+* Improved IE 7 compatibility
+* Added custom image link options
+* Added Fancybox jQuery option
+* Fixed galleryHeight bug
+* Implemented fetch with wp_remote_get()
